@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.edu.aimt.StudentActivity"
+    tools:openDrawer="start">
+<android.support.percent.PercentFrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            app:layout_heightPercent="60%"
+            android:background="@drawable/bg_gradient">
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/chart1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?attr/actionBarSize"
+        />
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Details"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:textColor="#88999999"
+            app:layout_marginTopPercent="62%"
+            android:gravity="center"
+            android:id="@+id/stats_container"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_margin="24dp"
+            android:orientation="horizontal"
+            android:layout_below="@+id/stats_container">
+
+                <com.edu.aimt.SubtitleView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:subText="Est. Arrival Time"
+                    app:titleText="8:25 am"/>
+                <View
+                    android:layout_height="52dp"
+                    android:layout_width="1dp"
+                    android:background="#ccc"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    />
+                <com.edu.aimt.SubtitleView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:subText="Attendance"
+                    app:titleText="66%"/>
+                <View
+                    android:layout_height="52dp"
+                    android:layout_width="1dp"
+                    android:background="#ccc"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    />
+                <com.edu.aimt.SubtitleView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:subText="Bunks"
+                    app:titleText="2"/>
+
+        </LinearLayout>
+    </android.support.percent.PercentRelativeLayout>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:theme="@style/CustomActionBar"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        android:background="@android:color/transparent"/>
+</android.support.percent.PercentFrameLayout>
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_student"
+        app:menu="@menu/activity_student_drawer" />
+
+</android.support.v4.widget.DrawerLayout>

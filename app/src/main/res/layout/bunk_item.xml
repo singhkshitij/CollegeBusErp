@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:paddingTop="22dp"
+    android:paddingBottom="22dp"
+    >
+<ImageView
+    android:layout_width="54dp"
+    android:layout_height="54dp"
+    android:src="@drawable/hugh"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentLeft="true"
+    android:id="@+id/student_photo"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/student_photo"
+        android:layout_toEndOf="@id/student_photo"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="6dp"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:text="Name:"
+            android:textColor="#bb000000"
+            android:id="@+id/mainContent"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:text="Branch:"
+            android:textColor="#66000000"
+            android:id="@+id/subContent"
+            />
+
+    </LinearLayout>
+</RelativeLayout>
